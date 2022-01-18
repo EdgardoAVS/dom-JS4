@@ -50,8 +50,9 @@ function check () {
     
   } else {
     doc.id("container-result").innerHTML = `<p class="wrong">The result of ${numbers[0]} + ${numbers[1]} es: ${plus}</p> <button id="try-again"class="button">Try Again</button>`;   
-    doc.id("result").setAttribute("disabled", "disabled");
     numbers = [];
+    doc.id("check").onclick = "";
+    doc.id("result").setAttribute("disabled", "disabled");
     doc.id("try-again").onclick = restart;
   }
 }
